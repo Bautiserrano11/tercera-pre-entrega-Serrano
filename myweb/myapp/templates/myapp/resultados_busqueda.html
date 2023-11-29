@@ -1,0 +1,12 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}Resultados de Búsqueda{% endblock %}
+
+{% block content %}
+    <h1>Resultados de Búsqueda para "{{ consulta }}"</h1>
+    <ul>
+        {% for resultado in resultados %}
+            <li>{{ resultado.titulo }} - {{ resultado.autor.nombre }} - {{ resultado.fecha_publicacion }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

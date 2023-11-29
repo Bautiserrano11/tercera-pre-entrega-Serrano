@@ -1,0 +1,14 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}Agregar Datos{% endblock %}
+
+{% block content %}
+    <h1>Agregar Datos</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ formulario_libro.as_p }}
+        {{ formulario_pelicula.as_p }}
+        {{ formulario_autor.as_p }}
+        <button type="submit">Enviar</button>
+    </form>
+{% endblock %}
